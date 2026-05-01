@@ -239,4 +239,11 @@ javascript:(function() {
                 tech.isExplodeSnipe = false
             }
         }]
+
+    const techArray = tech.tech.filter(
+		(obj, index, self) =>
+			index === self.findIndex((item) => item.name === obj.name)
+		);
+	tech.tech = techArray;
+	console.log("%cSniper mod successfully installed", "color: gray");
     })();

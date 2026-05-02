@@ -15,19 +15,20 @@ javascript:(function(){
                     m.resetHistory();
                     Matter.Body.setPosition(player, simulation.mouseInGame);
                     Matter.Body.setVelocity(player, { x: 0, y: 0 });
-                } else if ((input.field && m.fieldCDcycle < m.cycle)) { //not hold but field button is pressed
-                    if (m.energy > m.fieldRegen) 
-                    m.energy -= m.fieldRegen;
-                    m.grabPowerUp();
-                    m.lookForPickUp();
-                    m.drawField();
-                    m.pushMobsFacing();
-                } else if (m.holdingTarget && m.fieldCDcycle < m.cycle) { //holding, but field button is released
-                    m.pickUp();
-                } else {
-                    m.holdingTarget = null; //clears holding target (this is so you only pick up right after the field button is released and a hold target exists)
-                }
-                m.drawRegenEnergy()
+                } else if ((input.field && m.fieldCDcycle < m.cycle)) {
+				    if (m.energy > m.fieldRegen) m.energy -= m.fieldRegen
+				    m.grabPowerUp();
+				    if(typeof m.lookForPickUp == 'function') { //lookForPickUp is changed in newer versions to lookForBlock
+					    m.lookForPickUp(); 
+				    } else {
+					    m.lookForBlock();
+				    }
+				} else if (m.holdingTarget && m.fieldCDcycle < m.cycle) {
+				    m.pickUp();
+				} else {
+				    m.holdingTarget = null;
+				}
+				m.drawRegenEnergy()
             }
         },
 }

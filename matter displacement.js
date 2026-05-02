@@ -16,11 +16,12 @@ javascript:(function(){
                     Matter.Body.setPosition(player, simulation.mouseInGame);
                     Matter.Body.setVelocity(player, { x: 0, y: 0 });
                 } else if ((input.field && m.fieldCDcycle < m.cycle)) { //not hold but field button is pressed
-                    if (m.energy > m.fieldRegen) m.energy -= m.fieldRegen
-                    m.grabPowerUp();
-                    m.lookForPickUp();
-                    m.drawField();
-                    m.pushMobsFacing();
+                    if (m.energy > m.fieldRegen) 
+						m.energy -= m.fieldRegen;
+                    	m.grabPowerUp();
+                    	m.lookForPickUp();
+                    	m.drawField();
+                    	m.pushMobsFacing();
                 } else if (m.holdingTarget && m.fieldCDcycle < m.cycle) { //holding, but field button is released
                     m.pickUp();
                 } else {

@@ -1,5 +1,5 @@
 javascript:(function(){
-    const f = {
+    const e = {
         name: "matter displacement",
         description: `use <strong class='color-f'>energy</strong> to <strong>teleport</strong> to mouse position<br>use excess <strong class='color-f'>energy</strong> to <strong>deflect</strong> mobs<br><strong>6</strong> <strong class='color-f'>energy</strong> per second`,
         effect: () => {
@@ -29,7 +29,7 @@ javascript:(function(){
             }
         },
 }
-m.fieldUpgrades.push(f);
+m.fieldUpgrades.push(e);
 	const fieldArray = m.fieldUpgrades.filter(
 	(obj, index, self) =>
 		index === self.findIndex((item) => item.name === obj.name)

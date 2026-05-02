@@ -1,6 +1,5 @@
 javascript:(function(){
     const f = {
-    {
         name: "matter displacement",
         description: `use <strong class='color-f'>energy</strong> to <strong>teleport</strong> to mouse position<br>use excess <strong class='color-f'>energy</strong> to <strong>deflect</strong> mobs<br><strong>6</strong> <strong class='color-f'>energy</strong> per second`,
         effect: () => {
@@ -28,8 +27,7 @@ javascript:(function(){
                     m.holdingTarget = null; //clears holding target (this is so you only pick up right after the field button is released and a hold target exists)
                 }
             }
-        }
-    }
+        },
 }
 m.fieldUpgrades.push(f);
 	const fieldArray = m.fieldUpgrades.filter(

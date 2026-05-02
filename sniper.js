@@ -1,7 +1,6 @@
 javascript:(function() {
     const e = {
             name: "sniper", //12
-            // description: `fire a wide <strong>burst</strong> of short range <strong> bullets</strong><br>with a low <strong><em>fire rate</em></strong><br><strong>3-4</strong> nails per ${powerUps.orb.ammo()}`,
             descriptionFunction() {
                 return `fires a <strong>high caliber</strong> long-range shot <strong></strong><br>has a very slow <strong><em>fire rate</em></strong><br><strong>${this.ammoPack.toFixed(1)}</strong> shots per ${powerUps.orb.ammo()}`
             },
@@ -18,7 +17,7 @@ javascript:(function() {
                     ctx.arc(m.pos.x, m.pos.y, 28, m.angle - left, m.angle);
                     // ctx.fillStyle = "rgba(0,0,0,0.3)" //"#333"
                     // ctx.fill();
-                    ctx.strokeStyle = "#333";
+                    ctx.strokeStyle = "#800000";
                     ctx.lineWidth = 2;
                     ctx.stroke();
                 }
@@ -176,9 +175,9 @@ javascript:(function() {
             frequency: 2,
             frequencyDefault: 2,
             allowed() {
-                return (tech.haveGunCheck("sniper")) && !tech.isFireMoveLock
+                return (tech.haveGunCheck("sniper"))
             },
-            requires: "sniper, not Higgs mechanism",
+            requires: "sniper",
             effect() {
                 tech.isTacticalEfficiency += 1
             },

@@ -1,6 +1,5 @@
 javascript:(function(){
     const e = {
-    {
         name: "matter displacement",
         description: `use <strong class='color-f'>energy</strong> to <strong>teleport</strong> to mouse position<br>use excess <strong class='color-f'>energy</strong> to <strong>deflect</strong> mobs<br><strong>6</strong> <strong class='color-f'>energy</strong> per second`,
         effect: () => {
@@ -30,8 +29,6 @@ javascript:(function(){
                 m.drawRegenEnergy()
             }
         }
-    }
-       
 }
 m.fieldUpgrades.push(e);
 	const fieldArray = m.fieldUpgrades.filter(

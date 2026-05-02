@@ -1,5 +1,5 @@
 javascript:(function() {
-    const b = {
+    const e = {
             name: "sniper", //12
             // description: `fire a wide <strong>burst</strong> of short range <strong> bullets</strong><br>with a low <strong><em>fire rate</em></strong><br><strong>3-4</strong> nails per ${powerUps.orb.ammo()}`,
             descriptionFunction() {
@@ -137,7 +137,7 @@ javascript:(function() {
                 multiShot();
             },
         };
-    b.guns.push(b);
+    b.guns.push(e);
 	const gunArray = b.guns.filter(
 	(obj, index, self) =>
 		index === self.findIndex((item) => item.name === obj.name)

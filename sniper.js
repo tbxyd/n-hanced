@@ -137,6 +137,13 @@ javascript:(function() {
                 multiShot();
             }
         }
+    b.guns.push(e);
+	const gunArray = b.guns.filter(
+	(obj, index, self) =>
+		index === self.findIndex((item) => item.name === obj.name)
+	);
+	b.guns = gunArray;
+
     const t = [
         {
             //n-hanced

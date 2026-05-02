@@ -137,14 +137,14 @@ javascript:(function() {
                 multiShot();
             }
         }
-    b.guns.push(e);
+    b.guns.push(b);
 	const gunArray = b.guns.filter(
 	(obj, index, self) =>
 		index === self.findIndex((item) => item.name === obj.name)
 	);
 	b.guns = gunArray;
 
-    const t = [
+    const t = {
         {
             //n-hanced
             name: "focused shielding",
@@ -245,12 +245,22 @@ javascript:(function() {
             remove() {
                 tech.isExplodeSnipe = false
             }
-        }]
+        },}
 
-    const techArray = tech.tech.filter(
+    t.reverse();
+	for(let i = 0; i < tech.tech.length; i++) {
+		if(tech.tech[i].name === 'spherical harmonics') {
+			for(let j = 0; j < t.length; j++) {
+				tech.tech.splice(i, 0, t[j]);
+			}
+			break;
+		}
+	}
+	const techArray = tech.tech.filter(
 		(obj, index, self) =>
 			index === self.findIndex((item) => item.name === obj.name)
 		);
 	tech.tech = techArray;
-	console.log("%cSniper mod successfully installed", "color: gray");
+
+	console.log("%cSniper mod successfully installed", "color: purple");
     })();

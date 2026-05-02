@@ -38,4 +38,5 @@ m.fieldUpgrades.push(e);
 		index === self.findIndex((item) => item.name === obj.name)
 	);
 m.fieldUpgrades = fieldArray;
+console.log("%cMatter Displacement Mod", "color: purple");
 })();

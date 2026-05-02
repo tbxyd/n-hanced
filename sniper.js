@@ -247,7 +247,6 @@ javascript:(function() {
             }
         }
     ];
-
     t.reverse();
 	for(let i = 0; i < tech.tech.length; i++) {
 		if(tech.tech[i].name === 'spherical harmonics') {
@@ -262,6 +261,5 @@ javascript:(function() {
 			index === self.findIndex((item) => item.name === obj.name)
 		);
 	tech.tech = techArray;
-
-	console.log("%cSniper mod successfully installed", "color: purple");
+	console.log("%cSniper Mod", "color: purple");
 })();

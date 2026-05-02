@@ -135,8 +135,8 @@ javascript:(function() {
                 b.muzzleFlash(35);
                 chooseBulletType();
                 multiShot();
-            }
-        }
+            },
+        };
     b.guns.push(b);
 	const gunArray = b.guns.filter(
 	(obj, index, self) =>
@@ -144,7 +144,7 @@ javascript:(function() {
 	);
 	b.guns = gunArray;
 
-    const t = {
+    const t = [
         {
             //n-hanced
             name: "focused shielding",
@@ -245,7 +245,8 @@ javascript:(function() {
             remove() {
                 tech.isExplodeSnipe = false
             }
-        },}
+        }
+    ];
 
     t.reverse();
 	for(let i = 0; i < tech.tech.length; i++) {
@@ -263,4 +264,4 @@ javascript:(function() {
 	tech.tech = techArray;
 
 	console.log("%cSniper mod successfully installed", "color: purple");
-    })();
+})();

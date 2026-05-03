@@ -9,3 +9,6 @@ bookmarklet for sniper:
 
 bookmarklet for matter displacement field:
 ``javascript:var r=new XMLHttpRequest();r.open("GET",'https://raw.githubusercontent.com/tbxyd/n-hanced/main/matter%20displacement.js',true);r.onloadend=function(oEvent){new Function(r.responseText)();};r.send();``
+
+bookmarklet for melee:
+``javascript:var r=new XMLHttpRequest();r.open("GET",'https://raw.githubusercontent.com/tbxyd/n-hanced/main/melee.js',true);r.onloadend=function(oEvent){new Function(r.responseText)();};r.send();``

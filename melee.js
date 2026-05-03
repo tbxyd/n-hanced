@@ -9,7 +9,7 @@ javascript:(function() {
         defaultAmmoPack: Infinity,
         have: false,
         meleeCharge: 0.6,
-        harpoonSize: 1,
+        harpoonSize: 0.5,
         do() {
             if (this.meleeCharge > 0) {
                 if ((!input.fire && this.meleeCharge > 0.6)) {
@@ -25,7 +25,7 @@ javascript:(function() {
                     const range = 75 + 10 * this.meleeCharge
                     for (let i = 0, len = mob.length; i < len; i++) {
                         //pushes the mobs when firing
-                        if (!mod[i].isUnblockable) {
+                        if (!mob[i].isUnblockable) {
                             const SUB = Vector.sub(mob[i].position, m.pos)
                             const DISTANCE = Vector.magnitude(SUB)
                             if (DISTANCE < range + mob[i].radius) {

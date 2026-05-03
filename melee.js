@@ -92,7 +92,7 @@ javascript:(function() {
                             }
                         }
                     }
-                    b.harpoon(where, closest.target, m.angle, harpoonSize, false, 35, false, thrust)
+                    b.harpoon(where, closest.target, m.angle, harpoonSize, false, 35, false, 0.9)
                     
                     this.meleeCharge = 0;
                 }
